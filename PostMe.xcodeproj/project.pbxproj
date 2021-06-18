@@ -10,7 +10,6 @@
 		320BDD35267CEBE300F71A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BDD34267CEBE300F71A70 /* AppDelegate.swift */; };
 		320BDD37267CEBE300F71A70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BDD36267CEBE300F71A70 /* SceneDelegate.swift */; };
 		320BDD39267CEBE300F71A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BDD38267CEBE300F71A70 /* ViewController.swift */; };
-		320BDD3C267CEBE300F71A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320BDD3A267CEBE300F71A70 /* Main.storyboard */; };
 		320BDD3E267CEBE400F71A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320BDD3D267CEBE400F71A70 /* Assets.xcassets */; };
 		320BDD41267CEBE400F71A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320BDD3F267CEBE400F71A70 /* LaunchScreen.storyboard */; };
 		320BDD4C267CEBE500F71A70 /* PostMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BDD4B267CEBE500F71A70 /* PostMeTests.swift */; };
@@ -39,7 +38,6 @@
 		320BDD34267CEBE300F71A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		320BDD36267CEBE300F71A70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		320BDD38267CEBE300F71A70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		320BDD3B267CEBE300F71A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		320BDD3D267CEBE400F71A70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		320BDD40267CEBE400F71A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		320BDD42267CEBE400F71A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				320BDD34267CEBE300F71A70 /* AppDelegate.swift */,
 				320BDD36267CEBE300F71A70 /* SceneDelegate.swift */,
 				320BDD38267CEBE300F71A70 /* ViewController.swift */,
-				320BDD3A267CEBE300F71A70 /* Main.storyboard */,
 				320BDD3D267CEBE400F71A70 /* Assets.xcassets */,
 				320BDD3F267CEBE400F71A70 /* LaunchScreen.storyboard */,
 				320BDD42267CEBE400F71A70 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				320BDD41267CEBE400F71A70 /* LaunchScreen.storyboard in Resources */,
 				320BDD3E267CEBE400F71A70 /* Assets.xcassets in Resources */,
-				320BDD3C267CEBE300F71A70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		320BDD3A267CEBE300F71A70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				320BDD3B267CEBE300F71A70 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		320BDD3F267CEBE400F71A70 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8A8F3GGD6;
 				INFOPLIST_FILE = PostMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.azmimuhammad.PostMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8A8F3GGD6;
 				INFOPLIST_FILE = PostMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.azmimuhammad.PostMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
