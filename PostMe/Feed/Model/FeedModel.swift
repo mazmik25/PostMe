@@ -18,3 +18,12 @@ struct FeedModel {
         self.headline = headline
     }
 }
+
+extension FeedModel {
+    static func mock() -> FeedModel {
+        return FeedModel(
+            image: UIImage(named: "news_placeholder"),
+            headline: "This is the sample of the headline"
+        )
+    }
+}

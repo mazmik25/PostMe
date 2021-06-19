@@ -40,7 +40,7 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         guard let cell: FeedCell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as? FeedCell else { return UITableViewCell() }
-        cell.viewModel = FeedModel(image: UIImage(named: "news_placeholder"), headline: "This is the sample of the headline for item at \(indexPath.row + 1)")
+        cell.viewModel = FeedModel.mock()
         return cell
     }
 }
