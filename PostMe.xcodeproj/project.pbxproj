@@ -18,6 +18,7 @@
 		32AF6EF8267D65FF0038C157 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF7267D65FF0038C157 /* FeedModel.swift */; };
 		32AF6EFA267D666F0038C157 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF9267D666F0038C157 /* ProfileViewController.swift */; };
 		32AF6EFF267D6EDF0038C157 /* FeedsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EFE267D6EDF0038C157 /* FeedsDetailViewController.swift */; };
+		32AF6F02267D6FB60038C157 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6F01267D6FB60038C157 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		32AF6EF7267D65FF0038C157 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		32AF6EF9267D666F0038C157 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		32AF6EFE267D6EDF0038C157 /* FeedsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsDetailViewController.swift; sourceTree = "<group>"; };
+		32AF6F01267D6FB60038C157 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		32AF6EF2267D646E0038C157 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				32AF6F00267D6FA60038C157 /* Subviews */,
 				32AF6EF4267D64A70038C157 /* FeedsViewController.swift */,
 			);
 			path = List;
@@ -175,6 +178,14 @@
 				32AF6EF7267D65FF0038C157 /* FeedModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		32AF6F00267D6FA60038C157 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				32AF6F01267D6FB60038C157 /* FeedCell.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 				320BDD35267CEBE300F71A70 /* AppDelegate.swift in Sources */,
 				32AF6EF8267D65FF0038C157 /* FeedModel.swift in Sources */,
 				32AF6EF5267D64A70038C157 /* FeedsViewController.swift in Sources */,
+				32AF6F02267D6FB60038C157 /* FeedCell.swift in Sources */,
 				320BDD37267CEBE300F71A70 /* SceneDelegate.swift in Sources */,
 				32AF6EFF267D6EDF0038C157 /* FeedsDetailViewController.swift in Sources */,
 			);

@@ -43,6 +43,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 private extension ProfileViewController {
     func setupView() {
         view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.leadingAnchor),
