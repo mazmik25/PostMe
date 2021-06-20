@@ -5,7 +5,7 @@
 //  Created by Azmi Muhammad on 20/06/21.
 //
 
-import Foundation
+import Base
 
 struct FeedApi {
     func getFeeds(completion: @escaping (Result<[FeedBodyResponse], Error>) -> Void) {

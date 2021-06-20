@@ -1,4 +1,4 @@
-import Foundation
+import Base
 
 final class NewProfileDetailInteractor {
 }

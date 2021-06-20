@@ -1,4 +1,5 @@
 import UIKit
+import Profile
 
 class ViewController: UITabBarController {
 

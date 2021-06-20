@@ -1,4 +1,5 @@
 import UIKit
+import Base
 
 enum NewProfileNavigationOption {
     case detail(userId: Int)
