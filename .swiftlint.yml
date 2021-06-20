@@ -1,0 +1,12 @@
+disabled_rules:
+- trailing_whitespace
+- line_length
+- trailing_newline
+- opening_brace
+- identifier_name
+
+identifier_name:
+    warning: 1
+    error: 50
+    
+reporter: "xcode"

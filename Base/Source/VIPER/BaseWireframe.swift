@@ -7,7 +7,7 @@ open class BaseWireframe {
 
     private unowned var _viewController: UIViewController
 
-    //to retain view controller reference upon first access
+    // To retain view controller reference upon first access
     private var _temporaryStoredViewController: UIViewController?
 
     public init(viewController: UIViewController) {

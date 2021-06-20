@@ -15,7 +15,6 @@ class ProfileDetailViewController: UIViewController {
     
     var id: Int = 0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
