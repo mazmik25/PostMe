@@ -45,6 +45,11 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if let postId: Int = viewModels[indexPath.row].id {
+            let viewController: FeedsDetailViewController = FeedsDetailViewController()
+            viewController.postId = postId
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 

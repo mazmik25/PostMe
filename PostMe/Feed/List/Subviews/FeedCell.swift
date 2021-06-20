@@ -18,7 +18,6 @@ class FeedCell: UITableViewCell {
     
     private lazy var feedImageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
-//        imageView.contentMode = .scaleAspectFill
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.layer.borderWidth = 1.0
         return imageView
@@ -28,10 +27,22 @@ class FeedCell: UITableViewCell {
         let label: UILabel = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .lightGray
-        label.numberOfLines = 2
+        label.numberOfLines = numberOfLines
         label.textAlignment = .justified
         return label
     }()
+    
+    var numberOfLines: Int = 2 {
+        didSet { headlineLabel.numberOfLines = numberOfLines }
+    }
+    
+    var headlineTextColor: UIColor? {
+        didSet { headlineLabel.textColor = headlineTextColor }
+    }
+    
+    var headlineFont: UIFont? {
+        didSet { headlineLabel.font = headlineFont }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
