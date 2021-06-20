@@ -17,7 +17,7 @@ rename the `bundle ID` since we'll implement Firebase too!
 
 ## Challenge
 - Implementing **SwiftLint** \
-In the first step, you will learn how to implement swiftlint into your project. You can check the configuration [here](https://github.com/realm/SwiftLint). \ 
+In the first step, you will learn how to implement swiftlint into your project. You can check the configuration [here](https://github.com/realm/SwiftLint).
 For the solution, you can check it [here](https://github.com/mazmik25/PostMe/tree/enhancement/add_swiftlint)
 
 - Learn **VIPER** \
@@ -40,7 +40,7 @@ and [here](https://www.raywenderlich.com/8440907-getting-started-with-the-viper-
 With that being said, can you help me to refactor my Profile page into VIPER? \
 After about an hour, a day or two, if you feel stuck with this challenge -- 
 not with the old memories...;) -- feel free to check the solution 
-[here]().
+[here](https://github.com/mazmik25/PostMe/tree/enhancement/viper_profile_module).
 
 - Modularized VIPERed Profile \
 You're almost there! After working with viperized the Profile page, we can now start 
