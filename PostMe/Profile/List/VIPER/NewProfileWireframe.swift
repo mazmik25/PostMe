@@ -11,7 +11,11 @@ final class NewProfileWireframe: BaseWireframe {
         super.init(viewController: moduleViewController)
 
         let interactor = NewProfileInteractor()
-        let presenter = NewProfilePresenter(view: moduleViewController, interactor: interactor, wireframe: self)
+        let presenter = NewProfilePresenter(
+            view: moduleViewController, 
+            interactor: interactor, 
+            wireframe: self
+        )
         moduleViewController.presenter = presenter
     }
 
@@ -23,9 +27,8 @@ extension NewProfileWireframe: NewProfileWireframeInterface {
     func navigate(to option: NewProfileNavigationOption) {
         switch option {
         case .detail(let userId):
-            let viewController: ProfileDetailViewController = ProfileDetailViewController()
-            viewController.id = userId
-            navigationController?.pushViewController(viewController, animated: true)
+            let wireframe: BaseWireframe = NewProfileDetailWireframe(userId: userId)
+            navigationController?.pushViewController(wireframe.viewController, animated: true)
         }
     }
 }
