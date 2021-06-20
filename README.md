@@ -18,7 +18,7 @@ rename the `bundle ID` since we'll implement Firebase too!
 ## Challenge
 - Implementing **SwiftLint** \
 In the first step, you will learn how to implement swiftlint into your project. You can check the configuration [here](https://github.com/realm/SwiftLint). \ 
-For the solution, you can check it [here]()
+For the solution, you can check it [here](https://github.com/mazmik25/PostMe/tree/enhancement/add_swiftlint)
 
 - Learn **VIPER** \
 Since implementing `VIPER` can make your hand swollen, you can use [this](https://github.com/infinum/iOS-VIPER-Xcode-Templates/tree/feature/v4.0) 
