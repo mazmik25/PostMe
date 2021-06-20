@@ -10,11 +10,9 @@ import UIKit
 class FeedsViewController: UIViewController {
     
     private let tableView: UITableView = UITableView()
-    private var safeArea: UILayoutGuide!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        safeArea = view.layoutMarginsGuide
         setupView()
         view.backgroundColor = .white
     }
@@ -53,8 +51,8 @@ private extension FeedsViewController {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
         ])
         tableView.register(FeedCell.self, forCellReuseIdentifier: "FeedCell")
         setupTableView()

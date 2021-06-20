@@ -14,6 +14,7 @@
 		320BDD41267CEBE400F71A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320BDD3F267CEBE400F71A70 /* LaunchScreen.storyboard */; };
 		320BDD4C267CEBE500F71A70 /* PostMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BDD4B267CEBE500F71A70 /* PostMeTests.swift */; };
 		320BDD57267CEBE500F71A70 /* PostMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BDD56267CEBE500F71A70 /* PostMeUITests.swift */; };
+		329C5FE7267ED610007E71EE /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FE6267ED610007E71EE /* ProfileModel.swift */; };
 		32AF6EF5267D64A70038C157 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF4267D64A70038C157 /* FeedsViewController.swift */; };
 		32AF6EF8267D65FF0038C157 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF7267D65FF0038C157 /* FeedModel.swift */; };
 		32AF6EFA267D666F0038C157 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF9267D666F0038C157 /* ProfileViewController.swift */; };
@@ -52,6 +53,7 @@
 		320BDD52267CEBE500F71A70 /* PostMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		320BDD56267CEBE500F71A70 /* PostMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMeUITests.swift; sourceTree = "<group>"; };
 		320BDD58267CEBE500F71A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		329C5FE6267ED610007E71EE /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		32AF6EF4267D64A70038C157 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		32AF6EF7267D65FF0038C157 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		32AF6EF9267D666F0038C157 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		320BDD33267CEBE300F71A70 /* PostMe */ = {
 			isa = PBXGroup;
 			children = (
+				32AF6F03267D964C0038C157 /* Api */,
 				32AF6EF1267D64690038C157 /* Profile */,
 				32AF6EF0267D64610038C157 /* Feed */,
 				320BDD34267CEBE300F71A70 /* AppDelegate.swift */,
@@ -137,6 +140,14 @@
 			path = PostMeUITests;
 			sourceTree = "<group>";
 		};
+		329C5FE5267ED604007E71EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				329C5FE6267ED610007E71EE /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		32AF6EF0267D64610038C157 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +161,7 @@
 		32AF6EF1267D64690038C157 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				329C5FE5267ED604007E71EE /* Model */,
 				32AF6EF9267D666F0038C157 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -186,6 +198,13 @@
 				32AF6F01267D6FB60038C157 /* FeedCell.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		32AF6F03267D964C0038C157 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329C5FE7267ED610007E71EE /* ProfileModel.swift in Sources */,
 				32AF6EFA267D666F0038C157 /* ProfileViewController.swift in Sources */,
 				320BDD39267CEBE300F71A70 /* ViewController.swift in Sources */,
 				320BDD35267CEBE300F71A70 /* AppDelegate.swift in Sources */,
