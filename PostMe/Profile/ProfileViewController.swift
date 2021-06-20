@@ -10,17 +10,12 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     private let tableView: UITableView = UITableView()
-    private var profileViewModels: [ProfileViewModel] = []
+    private var viewModels: [ProfileViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        profileViewModels = [
-            ProfileViewModel(title: "Name", subtitle: "Joko Sutjiptop")
-        ]
-        
         setupView()
-        view.backgroundColor = .white
+        fetchProfiles()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +30,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return profileViewModels.count
+        return viewModels.count
     }
     
     func tableView(
@@ -43,21 +38,24 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProfileCell")
-        let profileViewModel: ProfileViewModel = profileViewModels[indexPath.row]
+        let viewModel: ProfileViewModel = viewModels[indexPath.row]
         
         // Setup title label
-        cell.textLabel?.text = profileViewModel.title
+        cell.textLabel?.text = viewModel.title
         cell.textLabel?.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         cell.textLabel?.textColor = .lightGray
         
         // Setup subtitle label
-        cell.detailTextLabel?.text = profileViewModel.subtitle
+        cell.detailTextLabel?.text = viewModel.subtitle
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         cell.detailTextLabel?.textColor = .black
         
-        // Make the selection animation disappear
-        cell.selectionStyle = .none
+        cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -78,7 +76,29 @@ private extension ProfileViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProfileCell")
+    }
+    
+    func fetchProfiles() {
+        // Don't forget to give 'self' weak identifier so that it doesn't retain in our memory
+        // You can read more detail about it here
+        // https://medium.com/appcoda-tutorials/memory-management-in-swift-understanding-strong-weak-and-unowned-references-b80a06c82460
+        ProfileApi().getProfiles { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.viewModels = response.compactMap {
+                    ProfileViewModel(
+                        title: "Name",
+                        subtitle: $0.name
+                    )
+                }
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

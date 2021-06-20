@@ -18,7 +18,7 @@
 		329C5FE9267EE1FC007E71EE /* ProfileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FE8267EE1FC007E71EE /* ProfileApi.swift */; };
 		329C5FEB267EE202007E71EE /* FeedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FEA267EE202007E71EE /* FeedApi.swift */; };
 		32AF6EF5267D64A70038C157 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF4267D64A70038C157 /* FeedsViewController.swift */; };
-		32AF6EF8267D65FF0038C157 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF7267D65FF0038C157 /* FeedModel.swift */; };
+		32AF6EF8267D65FF0038C157 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF7267D65FF0038C157 /* FeedViewModel.swift */; };
 		32AF6EFA267D666F0038C157 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF9267D666F0038C157 /* ProfileViewController.swift */; };
 		32AF6EFF267D6EDF0038C157 /* FeedsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EFE267D6EDF0038C157 /* FeedsDetailViewController.swift */; };
 		32AF6F02267D6FB60038C157 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6F01267D6FB60038C157 /* FeedCell.swift */; };
@@ -59,7 +59,7 @@
 		329C5FE8267EE1FC007E71EE /* ProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApi.swift; sourceTree = "<group>"; };
 		329C5FEA267EE202007E71EE /* FeedApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApi.swift; sourceTree = "<group>"; };
 		32AF6EF4267D64A70038C157 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
-		32AF6EF7267D65FF0038C157 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		32AF6EF7267D65FF0038C157 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		32AF6EF9267D666F0038C157 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		32AF6EFE267D6EDF0038C157 /* FeedsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsDetailViewController.swift; sourceTree = "<group>"; };
 		32AF6F01267D6FB60038C157 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		32AF6EF6267D65FA0038C157 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				32AF6EF7267D65FF0038C157 /* FeedModel.swift */,
+				32AF6EF7267D65FF0038C157 /* FeedViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 				320BDD39267CEBE300F71A70 /* ViewController.swift in Sources */,
 				329C5FEB267EE202007E71EE /* FeedApi.swift in Sources */,
 				320BDD35267CEBE300F71A70 /* AppDelegate.swift in Sources */,
-				32AF6EF8267D65FF0038C157 /* FeedModel.swift in Sources */,
+				32AF6EF8267D65FF0038C157 /* FeedViewModel.swift in Sources */,
 				32AF6EF5267D64A70038C157 /* FeedsViewController.swift in Sources */,
 				329C5FE9267EE1FC007E71EE /* ProfileApi.swift in Sources */,
 				32AF6F02267D6FB60038C157 /* FeedCell.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class FeedCell: UITableViewCell {
     
-    var viewModel: FeedModel? {
+    var viewModel: FeedViewModel? {
         didSet {
             feedImageView.image = viewModel?.image
             headlineLabel.text = viewModel?.headline
@@ -45,7 +45,6 @@ class FeedCell: UITableViewCell {
 
 private extension FeedCell {
     func setupView() {
-        selectionStyle = .none
         contentView.addSubview(feedImageView)
         contentView.addSubview(headlineLabel)
         

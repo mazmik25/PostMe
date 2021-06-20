@@ -10,11 +10,12 @@ import UIKit
 class FeedsViewController: UIViewController {
     
     private let tableView: UITableView = UITableView()
+    private var viewModels: [FeedViewModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        view.backgroundColor = .white
+        fetchFeeds()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +31,7 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 10
+        return viewModels.count
     }
     
     func tableView(
@@ -38,8 +39,12 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         guard let cell: FeedCell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as? FeedCell else { return UITableViewCell() }
-        cell.viewModel = FeedModel.mock()
+        cell.viewModel = viewModels[indexPath.count]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -64,5 +69,24 @@ private extension FeedsViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+    }
+    
+    func fetchFeeds() {
+        FeedApi().getFeeds { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.viewModels = response.compactMap {
+                    FeedViewModel(
+                        image: UIImage(named: "news_placeholder"),
+                        headline: $0.title
+                    )
+                }
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-struct FeedModel {
+struct FeedViewModel {
     let image: UIImage?
     let headline: String?
     
@@ -19,9 +19,9 @@ struct FeedModel {
     }
 }
 
-extension FeedModel {
-    static func mock() -> FeedModel {
-        return FeedModel(
+extension FeedViewModel {
+    static func mock() -> FeedViewModel {
+        return FeedViewModel(
             image: UIImage(named: "news_placeholder"),
             headline: "This is the sample of the headline"
         )
