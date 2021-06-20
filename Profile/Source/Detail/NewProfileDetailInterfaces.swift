@@ -1,4 +1,5 @@
 import UIKit
+import Base
 
 protocol NewProfileDetailWireframeInterface: WireframeInterface {
 }

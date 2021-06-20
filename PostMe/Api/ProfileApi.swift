@@ -5,23 +5,10 @@
 //  Created by Azmi Muhammad on 20/06/21.
 //
 
-import Foundation
-
-enum ApiError: Error {
-    case invalidURL
-    case failedToDecode(error: Error)
-    case unknown(error: Error)
-}
+import Base
+import Profile
 
 struct ProfileApi {
-    private var session: URLSession {
-        let configuration: URLSessionConfiguration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 30
-        configuration.timeoutIntervalForResource = 30
-        let session: URLSession = URLSession(configuration: configuration)
-        return session
-    }
-    
     // Result was introduced in Swift 4.2. You can read the doc here
     // https://developer.apple.com/documentation/swift/result
     func getProfiles(completion: @escaping (Result<[ProfileBodyResponse], Error>) -> Void) {

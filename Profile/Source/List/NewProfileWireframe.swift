@@ -1,12 +1,12 @@
-import UIKit
+import Base
 
-final class NewProfileWireframe: BaseWireframe {
+public final class NewProfileWireframe: BaseWireframe {
 
     // MARK: - Private properties -
 
     // MARK: - Module setup -
 
-    init() {
+    public init() {
         let moduleViewController = NewProfileViewController()
         super.init(viewController: moduleViewController)
 

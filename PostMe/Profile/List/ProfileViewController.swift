@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Profile
 
 class ProfileViewController: UIViewController {
 
