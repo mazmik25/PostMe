@@ -53,7 +53,7 @@ that we created recently. After that hit `cmd + R` to see the impact. It's that 
 right? Or...is it? \
 It looks like Xcode doesn't happy with our changes. Can you please put the smile back 
 to Xcode? I'm counting on you! I know you can! Good luck! \
-Finished yet? Or are you just looking for solution? Find! Here's [my implementation]()
+Finished yet? Or are you just looking for solution? Fine! Here's [my implementation](https://github.com/mazmik25/PostMe/tree/enhancement/modularized_viper_profile)
 
 - Validate your implementation with Unit Testing \
 If you're in this milestone, i would like to congratulate you! Because you're on the 
