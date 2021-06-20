@@ -11,7 +11,7 @@ final class NewProfileDetailWireframe: BaseWireframe {
         let moduleViewController = NewProfileDetailViewController()
         super.init(viewController: moduleViewController)
 
-        let interactor = NewProfileDetailInteractor()
+        let interactor = NewProfileDetailInteractor(api: ProfileApiService())
         let presenter = NewProfileDetailPresenter(
             view: moduleViewController,
             interactor: interactor,

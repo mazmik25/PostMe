@@ -10,7 +10,7 @@ public final class NewProfileWireframe: BaseWireframe {
         let moduleViewController = NewProfileViewController()
         super.init(viewController: moduleViewController)
 
-        let interactor = NewProfileInteractor()
+        let interactor = NewProfileInteractor(api: ProfileApiService())
         let presenter = NewProfilePresenter(
             view: moduleViewController, 
             interactor: interactor, 
