@@ -1,34 +1,47 @@
-//
-//  ProfileDetailViewController.swift
-//  PostMe
-//
-//  Created by Azmi Muhammad on 20/06/21.
-//
-
 import UIKit
 
-class ProfileDetailViewController: UIViewController {
+final class NewProfileViewController: UIViewController {
 
-    private let tableView: UITableView = UITableView()
+    // MARK: - Public properties -
+
+    var presenter: NewProfilePresenterInterface!
+    
     private var viewModels: [ProfileViewModel] = []
-    
-    var id: Int = 0
-    
-    
+    private var tableView: UITableView = {
+        let tableView: UITableView = UITableView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .singleLine
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProfileCell")
+        return tableView
+    }()
+
+    // MARK: - Lifecycle -
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        fetchDetailProfile()
+        presenter.getProfiles()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "View Profile"
+        title = "Profile"
     }
 
 }
 
-extension ProfileDetailViewController: UITableViewDelegate, UITableViewDataSource {
+// MARK: - Extensions -
+
+extension NewProfileViewController: NewProfileViewInterface {
+    func reloadData(viewModels: [ProfileViewModel]) {
+        self.viewModels = viewModels
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+}
+
+extension NewProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -52,18 +65,18 @@ extension ProfileDetailViewController: UITableViewDelegate, UITableViewDataSourc
         cell.detailTextLabel?.text = viewModel.subtitle
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         cell.detailTextLabel?.textColor = .black
-        cell.detailTextLabel?.numberOfLines = 0
         
-        cell.selectionStyle = .none
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter.viewDetail(profile: viewModels[indexPath.row])
     }
 }
 
-private extension ProfileDetailViewController {
+private extension NewProfileViewController {
     func setupView() {
         view.backgroundColor = .white
         view.addSubview(tableView)
@@ -74,37 +87,7 @@ private extension ProfileDetailViewController {
             tableView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
         ])
-        setupTableView()
-    }
-    
-    func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorStyle = .none
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProfileCell")
-    }
-    
-    func fetchDetailProfile() {
-        // Don't forget to give 'self' weak identifier so that it doesn't retain in our memory
-        // You can read more detail about it here
-        // https://medium.com/appcoda-tutorials/memory-management-in-swift-understanding-strong-weak-and-unowned-references-b80a06c82460
-        ProfileApi().getDetailProfile(id: id) { [weak self] result in
-            switch result {
-            case .success(let response):
-                let profile: ProfileBodyResponse? = response.first
-                self?.viewModels = [
-                    ProfileViewModel(id: self?.id, title: "Name", subtitle: profile?.name),
-                    ProfileViewModel(id: self?.id, title: "Address", subtitle: profile?.fullAdress),
-                    ProfileViewModel(id: self?.id, title: "Company", subtitle: profile?.companyProfile)
-                ]
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 }
-
