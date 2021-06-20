@@ -38,7 +38,7 @@ struct FeedApi {
         }
     }
     
-    func getFeedDetail(id: Int, completion: @escaping (Result<FeedBodyResponse, Error>) -> Void) {
+    func getFeedDetail(id: Int, completion: @escaping (Result<[FeedBodyResponse], Error>) -> Void) {
         if let url: URL = URL(string: "https://jsonplaceholder.typicode.com/posts/\(id)") {
             var request: URLRequest = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -54,7 +54,7 @@ struct FeedApi {
                         if Array(200..<300).contains(response.statusCode) {
                             let decoder: JSONDecoder = JSONDecoder()
                             do {
-                                let profiles: FeedBodyResponse = try decoder.decode(FeedBodyResponse.self, from: data)
+                                let profiles: [FeedBodyResponse] = try decoder.decode([FeedBodyResponse].self, from: data)
                                 completion(.success(profiles))
                             } catch {
                                 completion(.failure(ApiError.failedToDecode(error: error)))

@@ -51,6 +51,7 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Private Methods
 private extension FeedsViewController {
     func setupView() {
+        view.backgroundColor = .white
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -77,6 +78,7 @@ private extension FeedsViewController {
             case .success(let response):
                 self?.viewModels = response.compactMap {
                     FeedViewModel(
+                        id: $0.id,
                         image: UIImage(named: "news_placeholder"),
                         headline: $0.title
                     )

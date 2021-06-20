@@ -7,13 +7,16 @@
 
 import Foundation
 struct ProfileViewModel {
+    let id: Int?
     let title: String?
     let subtitle: String?
     
     init(
+        id: Int?,
         title: String?,
         subtitle: String?
     ) {
+        self.id = id
         self.title = title
         self.subtitle = subtitle
     }
@@ -30,17 +33,19 @@ struct ProfileBodyResponse: Decodable {
     
     var fullAdress: String? {
         return """
-            \(address?.street ?? "")
-            Suite: \(address?.suite ?? "-")
-            City: \(address?.city ?? "-")
-            Zipcode: \(address?.zipcode ?? "-")
+        \(address?.street ?? "")
+        Suite: \(address?.suite ?? "-")
+        City: \(address?.city ?? "-")
+        Zipcode: \(address?.zipcode ?? "-")
         """
     }
     
     var companyProfile: String? {
         return """
-            \(company?.name ?? "")
-            Type of Industry: \(company?.catchPhrase ?? "")
+        \(company?.name ?? "Unemployed")
+        Catch Phrase:
+        \(company?.catchPhrase?.split(separator: " ").compactMap { "- \($0)" }.joined(separator: "\n") ?? "-")
+        BS: \(company?.bs ?? "-")
         """
     }
 }

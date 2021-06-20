@@ -1,31 +1,34 @@
 //
-//  ProfileViewController.swift
+//  ProfileDetailViewController.swift
 //  PostMe
 //
-//  Created by Azmi Muhammad on 19/06/21.
+//  Created by Azmi Muhammad on 20/06/21.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileDetailViewController: UIViewController {
 
     private let tableView: UITableView = UITableView()
     private var viewModels: [ProfileViewModel] = []
     
+    var id: Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        fetchProfiles()
+        fetchDetailProfile()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Profile"
+        title = "View Profile"
     }
-    
+
 }
 
-extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProfileDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -49,8 +52,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.detailTextLabel?.text = viewModel.subtitle
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         cell.detailTextLabel?.textColor = .black
+        cell.detailTextLabel?.numberOfLines = 0
         
-        cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -59,15 +63,16 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-private extension ProfileViewController {
+private extension ProfileDetailViewController {
     func setupView() {
+        view.backgroundColor = .white
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
         ])
         setupTableView()
     }
@@ -76,23 +81,23 @@ private extension ProfileViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProfileCell")
     }
     
-    func fetchProfiles() {
+    func fetchDetailProfile() {
         // Don't forget to give 'self' weak identifier so that it doesn't retain in our memory
         // You can read more detail about it here
         // https://medium.com/appcoda-tutorials/memory-management-in-swift-understanding-strong-weak-and-unowned-references-b80a06c82460
-        ProfileApi().getProfiles { [weak self] result in
+        ProfileApi().getDetailProfile(id: id) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.viewModels = response.compactMap {
-                    ProfileViewModel(
-                        title: "Name",
-                        subtitle: $0.name
-                    )
-                }
+                let profile: ProfileBodyResponse? = response.first
+                self?.viewModels = [
+                    ProfileViewModel(id: self?.id, title: "Name", subtitle: profile?.name),
+                    ProfileViewModel(id: self?.id, title: "Address", subtitle: profile?.fullAdress),
+                    ProfileViewModel(id: self?.id, title: "Company", subtitle: profile?.companyProfile)
+                ]
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }

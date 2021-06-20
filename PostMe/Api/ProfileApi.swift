@@ -54,7 +54,7 @@ struct ProfileApi {
         }
     }
     
-    func getDetailProfile(id: Int, completion: @escaping (Result<ProfileBodyResponse, Error>) -> Void) {
+    func getDetailProfile(id: Int, completion: @escaping (Result<[ProfileBodyResponse], Error>) -> Void) {
         if let url: URL = URL(string: "https://jsonplaceholder.typicode.com/users?id=\(id)") {
             var request: URLRequest = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -70,7 +70,7 @@ struct ProfileApi {
                         if Array(200..<300).contains(response.statusCode) {
                             let decoder: JSONDecoder = JSONDecoder()
                             do {
-                                let profiles: ProfileBodyResponse = try decoder.decode(ProfileBodyResponse.self, from: data)
+                                let profiles: [ProfileBodyResponse] = try decoder.decode([ProfileBodyResponse].self, from: data)
                                 completion(.success(profiles))
                             } catch {
                                 completion(.failure(ApiError.failedToDecode(error: error)))
