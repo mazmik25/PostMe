@@ -18,6 +18,20 @@
 		329C5FE9267EE1FC007E71EE /* ProfileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FE8267EE1FC007E71EE /* ProfileApi.swift */; };
 		329C5FEB267EE202007E71EE /* FeedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FEA267EE202007E71EE /* FeedApi.swift */; };
 		329C5FEF267EF289007E71EE /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FEE267EF289007E71EE /* ProfileDetailViewController.swift */; };
+		329C5FF7267F0C9D007E71EE /* NewProfileInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FF2267F0C9D007E71EE /* NewProfileInterfaces.swift */; };
+		329C5FF8267F0C9D007E71EE /* NewProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FF3267F0C9D007E71EE /* NewProfilePresenter.swift */; };
+		329C5FF9267F0C9D007E71EE /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FF4267F0C9D007E71EE /* NewProfileViewController.swift */; };
+		329C5FFA267F0C9D007E71EE /* NewProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FF5267F0C9D007E71EE /* NewProfileInteractor.swift */; };
+		329C5FFB267F0C9D007E71EE /* NewProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FF6267F0C9D007E71EE /* NewProfileWireframe.swift */; };
+		329C6003267F0D39007E71EE /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C5FFD267F0D39007E71EE /* BaseWireframe.swift */; };
+		329C6006267F0D39007E71EE /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6000267F0D39007E71EE /* PresenterInterface.swift */; };
+		329C6007267F0D39007E71EE /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6001267F0D39007E71EE /* ViewInterface.swift */; };
+		329C6008267F0D39007E71EE /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C6002267F0D39007E71EE /* InteractorInterface.swift */; };
+		329C6010267F0E46007E71EE /* NewProfileDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C600B267F0E46007E71EE /* NewProfileDetailInterfaces.swift */; };
+		329C6011267F0E46007E71EE /* NewProfileDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C600C267F0E46007E71EE /* NewProfileDetailPresenter.swift */; };
+		329C6012267F0E46007E71EE /* NewProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C600D267F0E46007E71EE /* NewProfileDetailViewController.swift */; };
+		329C6013267F0E46007E71EE /* NewProfileDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C600E267F0E46007E71EE /* NewProfileDetailInteractor.swift */; };
+		329C6014267F0E46007E71EE /* NewProfileDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C600F267F0E46007E71EE /* NewProfileDetailWireframe.swift */; };
 		32AF6EF5267D64A70038C157 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF4267D64A70038C157 /* FeedsViewController.swift */; };
 		32AF6EF8267D65FF0038C157 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF7267D65FF0038C157 /* FeedViewModel.swift */; };
 		32AF6EFA267D666F0038C157 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6EF9267D666F0038C157 /* ProfileViewController.swift */; };
@@ -60,6 +74,20 @@
 		329C5FE8267EE1FC007E71EE /* ProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApi.swift; sourceTree = "<group>"; };
 		329C5FEA267EE202007E71EE /* FeedApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApi.swift; sourceTree = "<group>"; };
 		329C5FEE267EF289007E71EE /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		329C5FF2267F0C9D007E71EE /* NewProfileInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileInterfaces.swift; sourceTree = "<group>"; };
+		329C5FF3267F0C9D007E71EE /* NewProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfilePresenter.swift; sourceTree = "<group>"; };
+		329C5FF4267F0C9D007E71EE /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		329C5FF5267F0C9D007E71EE /* NewProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileInteractor.swift; sourceTree = "<group>"; };
+		329C5FF6267F0C9D007E71EE /* NewProfileWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileWireframe.swift; sourceTree = "<group>"; };
+		329C5FFD267F0D39007E71EE /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		329C6000267F0D39007E71EE /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		329C6001267F0D39007E71EE /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		329C6002267F0D39007E71EE /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		329C600B267F0E46007E71EE /* NewProfileDetailInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileDetailInterfaces.swift; sourceTree = "<group>"; };
+		329C600C267F0E46007E71EE /* NewProfileDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileDetailPresenter.swift; sourceTree = "<group>"; };
+		329C600D267F0E46007E71EE /* NewProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileDetailViewController.swift; sourceTree = "<group>"; };
+		329C600E267F0E46007E71EE /* NewProfileDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileDetailInteractor.swift; sourceTree = "<group>"; };
+		329C600F267F0E46007E71EE /* NewProfileDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileDetailWireframe.swift; sourceTree = "<group>"; };
 		32AF6EF4267D64A70038C157 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		32AF6EF7267D65FF0038C157 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		32AF6EF9267D666F0038C157 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -116,14 +144,15 @@
 			isa = PBXGroup;
 			children = (
 				32AF6F03267D964C0038C157 /* Api */,
-				32AF6EF1267D64690038C157 /* Profile */,
-				32AF6EF0267D64610038C157 /* Feed */,
 				320BDD34267CEBE300F71A70 /* AppDelegate.swift */,
+				320BDD3D267CEBE400F71A70 /* Assets.xcassets */,
+				329C5FFC267F0D39007E71EE /* Base */,
+				32AF6EF0267D64610038C157 /* Feed */,
+				320BDD42267CEBE400F71A70 /* Info.plist */,
+				320BDD3F267CEBE400F71A70 /* LaunchScreen.storyboard */,
+				32AF6EF1267D64690038C157 /* Profile */,
 				320BDD36267CEBE300F71A70 /* SceneDelegate.swift */,
 				320BDD38267CEBE300F71A70 /* ViewController.swift */,
-				320BDD3D267CEBE400F71A70 /* Assets.xcassets */,
-				320BDD3F267CEBE400F71A70 /* LaunchScreen.storyboard */,
-				320BDD42267CEBE400F71A70 /* Info.plist */,
 			);
 			path = PostMe;
 			sourceTree = "<group>";
@@ -157,6 +186,7 @@
 		329C5FEC267EF232007E71EE /* List */ = {
 			isa = PBXGroup;
 			children = (
+				329C5FF1267F0C84007E71EE /* VIPER */,
 				32AF6EF9267D666F0038C157 /* ProfileViewController.swift */,
 			);
 			path = List;
@@ -165,9 +195,53 @@
 		329C5FED267EF237007E71EE /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				329C6009267F0E30007E71EE /* VIPER */,
 				329C5FEE267EF289007E71EE /* ProfileDetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		329C5FF1267F0C84007E71EE /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				329C5FF2267F0C9D007E71EE /* NewProfileInterfaces.swift */,
+				329C5FF3267F0C9D007E71EE /* NewProfilePresenter.swift */,
+				329C5FF4267F0C9D007E71EE /* NewProfileViewController.swift */,
+				329C5FF5267F0C9D007E71EE /* NewProfileInteractor.swift */,
+				329C5FF6267F0C9D007E71EE /* NewProfileWireframe.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		329C5FFC267F0D39007E71EE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				329C600A267F0E38007E71EE /* VIPER */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		329C6009267F0E30007E71EE /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				329C600B267F0E46007E71EE /* NewProfileDetailInterfaces.swift */,
+				329C600C267F0E46007E71EE /* NewProfileDetailPresenter.swift */,
+				329C600D267F0E46007E71EE /* NewProfileDetailViewController.swift */,
+				329C600E267F0E46007E71EE /* NewProfileDetailInteractor.swift */,
+				329C600F267F0E46007E71EE /* NewProfileDetailWireframe.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		329C600A267F0E38007E71EE /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				329C5FFD267F0D39007E71EE /* BaseWireframe.swift */,
+				329C6000267F0D39007E71EE /* PresenterInterface.swift */,
+				329C6001267F0D39007E71EE /* ViewInterface.swift */,
+				329C6002267F0D39007E71EE /* InteractorInterface.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 		32AF6EF0267D64610038C157 /* Feed */ = {
@@ -384,17 +458,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				329C5FE7267ED610007E71EE /* ProfileModel.swift in Sources */,
+				329C5FF7267F0C9D007E71EE /* NewProfileInterfaces.swift in Sources */,
 				329C5FEF267EF289007E71EE /* ProfileDetailViewController.swift in Sources */,
+				329C5FF8267F0C9D007E71EE /* NewProfilePresenter.swift in Sources */,
+				329C6010267F0E46007E71EE /* NewProfileDetailInterfaces.swift in Sources */,
+				329C5FFB267F0C9D007E71EE /* NewProfileWireframe.swift in Sources */,
 				32AF6EFA267D666F0038C157 /* ProfileViewController.swift in Sources */,
 				320BDD39267CEBE300F71A70 /* ViewController.swift in Sources */,
 				329C5FEB267EE202007E71EE /* FeedApi.swift in Sources */,
+				329C6007267F0D39007E71EE /* ViewInterface.swift in Sources */,
+				329C6013267F0E46007E71EE /* NewProfileDetailInteractor.swift in Sources */,
 				320BDD35267CEBE300F71A70 /* AppDelegate.swift in Sources */,
+				329C6008267F0D39007E71EE /* InteractorInterface.swift in Sources */,
+				329C6003267F0D39007E71EE /* BaseWireframe.swift in Sources */,
+				329C6014267F0E46007E71EE /* NewProfileDetailWireframe.swift in Sources */,
+				329C5FF9267F0C9D007E71EE /* NewProfileViewController.swift in Sources */,
 				32AF6EF8267D65FF0038C157 /* FeedViewModel.swift in Sources */,
 				32AF6EF5267D64A70038C157 /* FeedsViewController.swift in Sources */,
+				329C6011267F0E46007E71EE /* NewProfileDetailPresenter.swift in Sources */,
+				329C5FFA267F0C9D007E71EE /* NewProfileInteractor.swift in Sources */,
 				329C5FE9267EE1FC007E71EE /* ProfileApi.swift in Sources */,
 				32AF6F02267D6FB60038C157 /* FeedCell.swift in Sources */,
+				329C6012267F0E46007E71EE /* NewProfileDetailViewController.swift in Sources */,
 				320BDD37267CEBE300F71A70 /* SceneDelegate.swift in Sources */,
 				32AF6EFF267D6EDF0038C157 /* FeedsDetailViewController.swift in Sources */,
+				329C6006267F0D39007E71EE /* PresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

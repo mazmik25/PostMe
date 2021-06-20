@@ -3,7 +3,7 @@ import UIKit
 class ViewController: UITabBarController {
 
     private let feedsViewController: UIViewController = FeedsViewController()
-    private let profileViewController: UIViewController = ProfileViewController()
+    private let profileViewController: UIViewController = NewProfileWireframe().viewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
